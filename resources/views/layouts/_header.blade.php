@@ -14,10 +14,29 @@
             </ul>
             <!-- Right Side Of Navbar -->
              <ul class="navbar-nav navbar-right">
-                <!-- Authentication Links -->
-                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登录</a></li>
-                 <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a></li>
-             </ul>
+                @guest
+                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登录</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a></li>
+                @else
+                    <li class="nav-item dropdown">
+                        <a class="btn nav-link dropdown-toggle" href="#" id="dropdownMenu1" role="button" data-toggle="dropdown">
+                             <img src="https://iocaffcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png" style="width:60px">
+                            {{ Auth::user()->name }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <a class="dropdown-item" href="">个人中心</a>
+                            <a class="dropdown-item" href="">编辑资料</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" id="logout" href="#">
+                                <form action="{{ route('logout') }}" method="POST">
+                                {{ csrf_field() }}
+                                    <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
+                                </form>
+                            </a>
+                        </div>
+                    </li>
+                @endguest
+  </div>
          </div>
      </div>
 </nav>
