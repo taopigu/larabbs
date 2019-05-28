@@ -20,7 +20,7 @@
                 @else
                     <li class="nav-item dropdown">
                         <a class="btn nav-link dropdown-toggle" href="#" id="dropdownMenu1" role="button" data-toggle="dropdown">
-                             <img src="https://iocaffcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png" style="width:60px">
+                             <img src="{{ Auth::user()->avatar }}" style="width:60px">
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
