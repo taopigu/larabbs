@@ -11,6 +11,6 @@ class Reply extends Model
     }
 
     public function user(){
-        return $this->belongs(User::class);
+        return $this->belongsTo(User::class);
     }
 }
