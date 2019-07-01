@@ -24,8 +24,8 @@ return [
      'settings' => [
          'user_topic_body' => [
              'HTML.Doctype' => 'XHTML 1.0 Transitional',
-             'HTML.Allowed' => 'div,b,strong,i,em,a[href|title],ul,ol,ol[start],li,p[style],br',
-             'CSS.AllowedProperties' => 'font,font-size,font-weight,font-style,margin,width,height,font-family',
+             'HTML.Allowed' => 'div,em,a[href|title|style],ul,ol,li,p[style],br',
+             'CSS.AllowedProperties' => 'font,font-size,font-weight,font-style,font-family',
              'AutoFormat.AutoParagraph' => true,
              'AutoFormat.RemoveEmpty' => true,
          ],
