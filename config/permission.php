@@ -1,4 +1,3 @@
-                            <a class="dropdown-item" href="{{ route('users.show', Auth::id())}}">个人中心</a>
 <?php
 
 return [
