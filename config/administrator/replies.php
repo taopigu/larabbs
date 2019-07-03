@@ -1,7 +1,5 @@
 <?php
 use App\Models\Reply;
-use App\Models\User;
-use App\Models\Topic;
 
 return [
  'title' => '回复',
